@@ -48,49 +48,30 @@
     <div class="card border-0 text-center" style="color: #006633">
         <div class="card-body">
             <h2 class="card-title p-2">东北大学通行验证</h2>
-            <div class="main">
-                <div class="form_1">
-                    <form>
-                        <div class="input_1">
-                            <div class="login_logo">用户信息</div>
-                            <div class="close">X</div>
-                        </div>
-                        <hr>
-                        <div class="input_1"><input type="text" id="input_id" placeholder="&nbsp;学工号"></div>
-                        <div class="input_1"><input type="text" id="input_name" placeholder="&nbsp;姓名"></div>
-                        <select class="select_1" id="input_location">
-                            <option value="浑南校区西门">浑南校区西门</option>
-                            <option value="南湖校区西门">南湖校区西门</option>
-                            <option value="浑南校区学生浴池">浑南校区学生浴池</option>
-                        </select>
-                        <div class="input_1"><input class="submit_1" type="button" value="提&nbsp;交"
-                                                    onclick="setInfo()"></div>
-                    </form>
-                </div>
-            </div>
             <div class="animated infinite pulse p-2">
                 <i class="fas fa-arrow-circle-up" style="font-size: 14em;"></i>
             </div>
             <p class="card-text p-2" style="font-size: 1.3em;">
                 时间：<span id="nowDateTimeSpan"></span>
             </p>
+
         </div>
     </div>
     <ul class="list-group list-group-flush" style="background-color: #006633">
         <li class="list-group-item bg-transparent text-white d-flex">
             <div style="min-width: 4em; text-align-last: justify;">学工号</div>
             ：
-            <div id="stuId">xxx</div>
+            <div id="stuId">20195650</div>
         </li>
         <li class="list-group-item bg-transparent text-white d-flex">
             <div style="min-width: 4em; text-align-last: justify;">姓名</div>
             ：
-            <div id="stuName">xxx</div>
+            <div id="stuName">朱昕晟</div>
         </li>
         <li class="list-group-item bg-transparent text-white d-flex">
             <div style="min-width: 4em; text-align-last: justify;">验证位置</div>
             ：
-            <div id="location">xxx</div>
+            <div id="location">浑南校区西门</div>
         </li>
         <li class="list-group-item bg-transparent text-white d-flex">
             <div style="min-width: 4em; text-align-last: justify;">进出状态</div>
@@ -102,7 +83,6 @@
 <script>
     function setTime() {
         //
-        bombBox();
         var today = new Date();//定义日期对象
         var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年
         var MM = today.getMonth() + 1;//通过日期对象的getMonth()方法返回年
@@ -127,14 +107,6 @@
         document.getElementById('location').innerHTML = location;
     }
 
-    function bombBox() {
-        var close = document.getElementsByClassName("close");
-        var form_1 = document.getElementsByClassName("form_1");
-        form_1[0].className = "form_1 open";
-        close[0].addEventListener('click', function () {
-            form_1[0].className = "form_1";
-        })
-    }
 
     function checkTime(i) {
         if (i < 10) {
